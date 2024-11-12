@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour
         initScript = FindObjectOfType<init>();
 
         // Make sure the menu panel is hidden at the start
-        menuPanel.SetActive(false);
+        Resume();
     }
 
     void Update()
