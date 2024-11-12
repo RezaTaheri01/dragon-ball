@@ -1,4 +1,4 @@
-# Dragoball
+# dragon-ball
  A random 2d game create by unity
 
  # Editor version
