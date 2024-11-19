@@ -2,5 +2,5 @@
 * text=auto
 
 Packages/** linguist-vendored
-ProjectSettings linguist-vendored
+ProjectSettings/** linguist-vendored
 
