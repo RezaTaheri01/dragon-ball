@@ -29,14 +29,14 @@ public class PlayerMovement1 : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
             // flip player
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(5, 5, 5);
             run = true;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += Vector3.right * -speed * Time.deltaTime;
             // flip player
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-5, 5, 5);
             run = true;
         }
         else
