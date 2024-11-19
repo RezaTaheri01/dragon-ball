@@ -73,5 +73,6 @@ crashlytics-build.properties
 
 .vscode
 
-./Test Versions
+/TestVersions
+
 
