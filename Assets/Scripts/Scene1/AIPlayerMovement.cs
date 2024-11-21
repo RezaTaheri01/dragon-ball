@@ -2,82 +2,76 @@ using UnityEngine;
 
 public class AIPlayerMovement : MonoBehaviour
 {
-    
-    [SerializeField] private float speed; // Movement speed
-    public Rigidbody2D body;             // Rigidbody2D for physics-based movement
-    private Animator animator;           // Animator for controlling animations
+    [SerializeField] private float speed;               // Movement speed
+    [SerializeField] private float airControlFactor = 0.5f; // Factor for movement when in air
+    public Rigidbody2D body;                           // Rigidbody2D for physics-based movement
+    private Animator animator;                         // Animator for controlling animations
 
-    private Transform ball;              // Reference to the current ball
-    private Transform player;            // Reference to the player tagged as "Dragon"
-    public Transform enemyGoal;          // Reference to the enemy's goal
-    public Transform homePosition;       // Defensive position for AI
+    private Transform ball;                            // Reference to the ball
+    private Transform player;                          // Reference to the player tagged as "Dragon"
+    public Transform enemyGoal;                        // Reference to the enemy's goal
+    public Transform homePosition;                     // Defensive home position for AI
 
-    private bool grounded = true;        // Is the AI grounded?
-    private bool run = false;            // Is the AI running?
+    private bool grounded = true;                      // Is the AI grounded?
+    private bool run = false;                          // Is the AI running?
 
-    private Quaternion lockedRotation;   // Prevent rotation of the AI object
-    private float ballHeightThreshold = 1.5f; // Height above which ball is considered "in the air"
+    private Quaternion lockedRotation;                 // Lock the AI's rotation
+    private float ballHeightThreshold = 1.5f;          // Height above which the ball is considered "in the air"
+
+    private float flipTolerance = 0.1f;                // Tolerance to prevent rapid flipping
+    private float hitRange = 1.5f;                     // Distance within which the AI will hit the ball
+    // private float hitForce = 500f;                     // Force applied to the ball on hit
 
     private void Awake()
     {
-        // Lock rotation and get components
         lockedRotation = transform.rotation;
         animator = GetComponent<Animator>();
 
-        // Find the ball and player at the start
         FindBall();
         FindPlayer();
     }
 
     private void Update()
     {
-        // Keep rotation locked
         transform.rotation = lockedRotation;
 
-        // Ensure ball and player references are valid
         if (ball == null)
         {
-            FindBall(); // Find the ball again if destroyed
+            FindBall();
             return;
         }
 
         if (player == null)
         {
-            FindPlayer(); // Find the player if destroyed
+            FindPlayer();
             return;
         }
 
-        // AI Movement logic
+        if (IsCloseToBall())
+        {
+            HitBall();
+            return;
+        }
+
         Vector3 targetPosition;
 
         if (IsBallInAir())
         {
-            // Ball is in the air; return to home position
-            targetPosition = homePosition.position;
+            targetPosition = new Vector3(ball.position.x, transform.position.y, transform.position.z);
         }
         else
         {
-            // Ball is on the ground; move toward it
-            targetPosition = new Vector3(ball.position.x, transform.position.y, transform.position.z);
-
-            // Push the ball if close enough
-            // if (Vector3.Distance(transform.position, ball.position) < 1.5f)
-            // {
-            //     PushBall();
-            // }
+            targetPosition = ball.position;
         }
 
-        // Move toward the target
         MoveTowards(targetPosition);
 
-        // Set animator parameters
         animator.SetBool("Run", run);
         animator.SetBool("Grounded", grounded);
     }
 
     private void FindBall()
     {
-        // Dynamically find the ball by tag
         GameObject ballObject = GameObject.FindGameObjectWithTag("Ball");
         if (ballObject != null)
         {
@@ -91,7 +85,6 @@ public class AIPlayerMovement : MonoBehaviour
 
     private void FindPlayer()
     {
-        // Dynamically find the player tagged "Dragon"
         GameObject playerObject = GameObject.FindGameObjectWithTag("Dragon");
         if (playerObject != null)
         {
@@ -105,36 +98,65 @@ public class AIPlayerMovement : MonoBehaviour
 
     private bool IsBallInAir()
     {
-        // Check if the ball's Y position is above the ground threshold
         return ball.position.y > ballHeightThreshold;
+    }
+
+    private bool IsCloseToBall()
+    {
+        return Vector3.Distance(transform.position, ball.position) <= hitRange;
     }
 
     private void MoveTowards(Vector3 targetPosition)
     {
-        // Calculate direction and move
         Vector3 direction = (targetPosition - transform.position).normalized;
-        transform.position += direction * speed * Time.deltaTime;
 
-        // Flip AI to face the movement direction
-        if (direction.x > 0)
-            transform.localScale = Vector3.one;
-        else if (direction.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+        if (IsBallInAir())
+        {
+            transform.position += direction * speed * airControlFactor * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += direction * speed * Time.deltaTime;
+        }
+
+        HandleFlip(direction.x);
 
         run = true;
     }
 
-    private void PushBall()
+    private void HandleFlip(float directionX)
     {
-        // Push the ball towards the enemy goal
-        Vector2 directionToGoal = (enemyGoal.position - ball.position).normalized;
-        ball.GetComponent<Rigidbody2D>().AddForce(directionToGoal * speed, ForceMode2D.Impulse);
+        if (Mathf.Abs(directionX) > flipTolerance)
+        {
+            if (directionX > 0)
+                transform.localScale = Vector3.one;
+            else if (directionX < 0)
+                transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+    private void HitBall()
+    {
+        if (ball == null) return;
+
+        // Rigidbody2D ballRigidbody = ball.GetComponent<Rigidbody2D>();
+        // if (ballRigidbody != null)
+        // {
+        //     Vector2 directionToGoal = (enemyGoal.position - ball.position).normalized;
+        //     ballRigidbody.AddForce(directionToGoal * hitForce, ForceMode2D.Impulse);
+        //     Debug.Log("Ball hit toward the enemy goal!");
+        // }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Ground detection
         if (collision.gameObject.tag == "Ground")
             grounded = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            grounded = false;
     }
 }
