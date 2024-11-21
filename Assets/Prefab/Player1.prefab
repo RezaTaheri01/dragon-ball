@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpForce: 5
+  airControlFactor: 0.5
   body: {fileID: 2263251405617385968}
 --- !u!114 &4130050929973725511
 MonoBehaviour:

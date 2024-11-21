@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1633415367587991448}
   - component: {fileID: 1633415367587991455}
   - component: {fileID: 1633415367587991454}
-  - component: {fileID: 758900992538891290}
   - component: {fileID: 3964226289394962176}
   - component: {fileID: 6486780910708479165}
+  - component: {fileID: 4021489976515289163}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Dragon
@@ -157,19 +157,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &758900992538891290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633415367587991452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd13c966422e2044f89c76e082b95405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitForce: 500
 --- !u!114 &3964226289394962176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.25
+  airControlFactor: 1
   body: {fileID: 1633415367587991455}
   enemyGoal: {fileID: 2936080103859674509, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
   homePosition: {fileID: 4035020787596387435, guid: 03ccb04e459a669429a0cb2d87e00bf6, type: 3}
@@ -199,4 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpForce: 5
+  airControlFactor: 0.5
   body: {fileID: 1633415367587991455}
+--- !u!114 &4021489976515289163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633415367587991452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c966422e2044f89c76e082b95405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitForce: 500
