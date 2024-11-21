@@ -49,8 +49,10 @@ public class init : MonoBehaviour
             instance.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
             yield return null; // Wait for the next frame
         }
-
-        instance.transform.position = targetPosition; // Snap to target position at the end
+        if (instance != null)
+        {
+            instance.transform.position = targetPosition; // Snap to target position at the end
+        }
 
         // // After movement is complete, destroy the object
         // Destroy(instance);
