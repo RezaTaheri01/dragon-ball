@@ -1,6 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-Packages/** linguist-vendored
-ProjectSettings/** linguist-vendored
+*.shader linguist-vendored
+
 
