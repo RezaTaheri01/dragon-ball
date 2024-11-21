@@ -5,7 +5,7 @@
  2022.1.24f1
 
 # Exe
- There is an executable file in Game folder
+ There are executable releases in Releases section
 # 
 ![Dragon_Ball](https://github.com/user-attachments/assets/f6bc7390-2f32-4230-8a12-dbeafc6a6005)
 
