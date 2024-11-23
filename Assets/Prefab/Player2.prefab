@@ -171,8 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6.25
   airControlFactor: 1
-  body: {fileID: 1633415367587991455}
-  enemyGoal: {fileID: 2936080103859674509, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
   homePosition: {fileID: 4035020787596387435, guid: 03ccb04e459a669429a0cb2d87e00bf6, type: 3}
 --- !u!114 &6486780910708479165
 MonoBehaviour:
