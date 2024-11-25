@@ -5627,6 +5627,7 @@ GameObject:
   - component: {fileID: 1656419560}
   - component: {fileID: 1656419562}
   - component: {fileID: 1656419563}
+  - component: {fileID: 1656419564}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5745,6 +5746,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1117573865}
   volumeLabelTMP: {fileID: 46667051}
+--- !u!114 &1656419564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656419555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9969a7926ec54074e984ecf3373475df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 1
+  score_player: {fileID: 0}
+  goalText: {fileID: 0}
+  displayDuration: 2
+  goalAudioSource: {fileID: 0}
 --- !u!1 &1708504241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7502,6 +7520,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 92608541}
     - target: {fileID: 2936080103859674496, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
+      propertyPath: score_player
+      value: 
+      objectReference: {fileID: 237957902}
+    - target: {fileID: 2936080103859674496, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
       propertyPath: score_player_1
       value: 
       objectReference: {fileID: 237957902}
@@ -7649,6 +7671,29 @@ PrefabInstance:
       propertyPath: goalAudioSource
       value: 
       objectReference: {fileID: 1654383411}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4035020787596387436, guid: 03ccb04e459a669429a0cb2d87e00bf6, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ccb04e459a669429a0cb2d87e00bf6, type: 3}
+--- !u!1 &4035020787830197858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4035020787596387432, guid: 03ccb04e459a669429a0cb2d87e00bf6, type: 3}
+  m_PrefabInstance: {fileID: 4035020787830197857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4035020787830197859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035020787830197858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9969a7926ec54074e984ecf3373475df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 2
+  score_player: {fileID: 378436382}
+  goalText: {fileID: 92608541}
+  displayDuration: 2
+  goalAudioSource: {fileID: 1654383411}
