@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4035020787596387435}
   - component: {fileID: 4035020787596387434}
   - component: {fileID: 4035020787596387437}
-  - component: {fileID: 4035020787596387436}
   - component: {fileID: -3393757039958183221}
   m_Layer: 0
   m_Name: Bottom2
@@ -113,22 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4035020787596387436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4035020787596387432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68ce91cbf45c1a4ba701e0399bfca79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score_player_2: {fileID: 0}
-  goalText: {fileID: 0}
-  displayDuration: 2
-  goalAudioSource: {fileID: -3393757039958183221}
 --- !u!82 &-3393757039958183221
 AudioSource:
   m_ObjectHideFlags: 0
