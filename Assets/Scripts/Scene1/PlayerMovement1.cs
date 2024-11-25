@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement1 : MonoBehaviour
 {
+    public AudioSource jumpAudioSource;
+
     [SerializeField] private float speed; // Horizontal movement speed
     [SerializeField] private float jumpForce; // Vertical jump force
     [SerializeField] private float airControlFactor = 0.5f; // Control factor for air movement
@@ -59,6 +61,15 @@ public class PlayerMovement1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             Jump();
+            // Play jump sound
+            if (jumpAudioSource != null && jumpAudioSource.clip != null)
+            {
+                jumpAudioSource.PlayOneShot(jumpAudioSource.clip);
+            }
+            else
+            {
+                Debug.LogWarning("Jump AudioSource or clip not assigned!");
+            }
         }
 
         // Update animator parameters

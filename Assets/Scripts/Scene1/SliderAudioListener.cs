@@ -2,17 +2,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // Import TextMeshPro namespace
 
-public class Slider : MonoBehaviour
+public class SliderAudioListener : MonoBehaviour
 {
     public UnityEngine.UI.Slider volumeSlider;    // Reference to the Slider
     public TextMeshProUGUI volumeLabelTMP;        // Reference to the TextMeshPro for displaying volume
-
-    private const string VolumePrefKey = "MenuVolume"; // Key to save and retrieve volume
+    private const string VolumePrefKey = "Scene1Volume"; // Key to save and retrieve volume
 
     void Start()
     {
-        // Load the saved volume or set a default value of 0.25 (max volume) if no value is saved
-        float savedVolume = PlayerPrefs.GetFloat(VolumePrefKey, 0.5f);
+        // Load the saved volume or set a default value of 0.75 (75% volume) if no value is saved
+        float savedVolume = PlayerPrefs.GetFloat(VolumePrefKey, 0.75f);
         AudioListener.volume = savedVolume;
         volumeSlider.value = savedVolume;
 

@@ -12,11 +12,22 @@ public class BasketPlayer2 : MonoBehaviour
     public TextMeshProUGUI goalText;
     public float displayDuration = 2f; // How long the goal text should be displayed
     private init initScript;
+    public AudioSource goalAudioSource;
+
 
 
     // This will be called when a goal is scored
     public void ShowGoalBanner()
     {
+        // Play Goal sound
+        if (goalAudioSource != null && goalAudioSource.clip != null)
+        {
+            goalAudioSource.PlayOneShot(goalAudioSource.clip);
+        }
+        else
+        {
+            Debug.LogWarning("Goal AudioSource or clip not assigned!");
+        }
         // Set the text to show "Goal!"
         goalText.text = "Frog Goal!";
 
