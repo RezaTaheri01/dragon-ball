@@ -23,6 +23,9 @@ public class Pause : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                if(Time.timeScale == 0){
+                    Resume();
+                }
                 menuPanel.SetActive(true);
                 Time.timeScale = 0;
             }
@@ -30,6 +33,8 @@ public class Pause : MonoBehaviour
             {
                 initScript.reset();
             }
+        }else if (Input.GetKeyDown(KeyCode.Space) &&  Time.timeScale == 0){
+                    Resume();
         }
     }
 

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Mode;
     public GameObject player;  // The player GameObject
     public GameObject mainCam;  // The player GameObject
-    private PlayerMovement2 playerMovementScript;  // Reference to PlayerMovement2 script
+    private PlayerMovement playerMovementScript;  // Reference to PlayerMovement2 script
     private AIPlayerMovement aiPlayerScript;  // Reference to AIPlayerMovement script
     private init Init;  // Reference to AIPlayerMovement script
 
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Automatically get the scripts attached to the player GameObject
-        playerMovementScript = player.GetComponent<PlayerMovement2>();
+        playerMovementScript = player.GetComponent<PlayerMovement>();
         aiPlayerScript = player.GetComponent<AIPlayerMovement>();
         Init = mainCam.GetComponent<init>();
 

@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9969a7926ec54074e984ecf3373475df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score_player_1: {fileID: 0}
+  player: 1
+  score_player: {fileID: 0}
   goalText: {fileID: 0}
   displayDuration: 2
   goalAudioSource: {fileID: 4764627990148765184}
@@ -141,13 +142,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2c75d3502591243038ecc669aa191676, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 35
+  Priority: 60
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
