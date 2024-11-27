@@ -70,12 +70,14 @@ public class PlayerMovement : MonoBehaviour
             horizontalInput = 1; // Move right
             transform.localScale = facingRightScale; // Face right
             run = true;
+            PlayRunSound();
         }
         else if (Input.GetKey(leftKey))
         {
             horizontalInput = -1; // Move left
             transform.localScale = facingLeftScale; // Face left
             run = true;
+            PlayRunSound();
         }
         else
         {
@@ -88,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
         {
             // Full control on the ground
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
-            PlayRunSound();
         }
         else
         {

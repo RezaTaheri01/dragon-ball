@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2936080103859674509}
   - component: {fileID: 2936080103859674510}
   - component: {fileID: 2936080103859674511}
-  - component: {fileID: 2936080103859674496}
   - component: {fileID: 4764627990148765184}
+  - component: {fileID: 2936080103859674496}
   m_Layer: 0
   m_Name: Bottom1
   m_TagString: Untagged
@@ -113,23 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2936080103859674496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936080103859674508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9969a7926ec54074e984ecf3373475df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 1
-  score_player: {fileID: 0}
-  goalText: {fileID: 0}
-  displayDuration: 2
-  goalAudioSource: {fileID: 4764627990148765184}
 --- !u!82 &4764627990148765184
 AudioSource:
   m_ObjectHideFlags: 0
@@ -226,3 +209,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2936080103859674496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936080103859674508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9969a7926ec54074e984ecf3373475df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 1
+  score_player: {fileID: 0}
+  goalText: {fileID: 0}
+  displayDuration: 2
+  goalAudioSource: {fileID: 4764627990148765184}

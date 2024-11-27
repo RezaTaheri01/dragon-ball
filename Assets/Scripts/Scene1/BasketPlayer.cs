@@ -10,11 +10,18 @@ public class BasketPlayer : MonoBehaviour
 
     public int player = 1;
     public TextMeshProUGUI score_player;
+    public TextMeshProUGUI score_enemy;
     public TextMeshProUGUI goalText;
     public float displayDuration = 2f; // How long the goal text should be displayed
     private init initScript; // Reference to the init script
     private int temp = 0;
+    private int temp2 = 0;
     public AudioSource goalAudioSource;
+    public AudioSource persuasionAudioSource;
+    public AudioSource drawAudioSource;
+    private int base_diff = 2;
+    private int diff = 2;
+
 
     // This will be called when a goal is scored
     public void ShowGoalBanner()
@@ -56,9 +63,28 @@ public class BasketPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             temp = int.Parse(score_player.text);
+            temp2 = int.Parse(score_enemy.text);
             score_player.text = $"{temp + 1}";
+            PlaySound(temp, temp2);
             initScript.reset();
             ShowGoalBanner();
+        }
+    }
+
+    private void PlaySound(int temp, int temp2){
+        if (temp+1==temp2){
+            diff = base_diff;
+            // play draw sound
+            if (drawAudioSource != null && drawAudioSource.clip != null)
+            {
+                drawAudioSource.PlayOneShot(drawAudioSource.clip);
+            }
+        }else if(temp - temp2 == diff){
+            diff += base_diff;
+            if (persuasionAudioSource != null && persuasionAudioSource.clip != null)
+            {
+                persuasionAudioSource.PlayOneShot(persuasionAudioSource.clip);
+            }
         }
     }
 
