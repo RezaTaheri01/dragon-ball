@@ -41,7 +41,7 @@ public class BasketPlayer : MonoBehaviour
         goalText.text = "Dragon Goal!";
         }
         else{
-        goalText.text = "Frog Goal!";
+        goalText.text = "Frog Goal!!!";
         }
 
         // Make the text visible
