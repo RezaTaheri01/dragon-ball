@@ -16,27 +16,27 @@ public class Pause : MonoBehaviour
         Resume();
     }
 
-    void Update()
-    {
-        // Check if the space key is pressed
-        if (menuPanel.activeSelf == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if(Time.timeScale == 0){
-                    Resume();
-                }
-                menuPanel.SetActive(true);
-                Time.timeScale = 0;
-            }
-            else if (Input.GetKeyDown(KeyCode.R))
-            {
-                initScript.reset();
-            }
-        }else if (Input.GetKeyDown(KeyCode.Escape) &&  Time.timeScale == 0){
-                    Resume();
-        }
-    }
+    // void Update()
+    // {
+    //     // Check if the space key is pressed
+    //     if (menuPanel.activeSelf == false)
+    //     {
+    //         if (Input.GetKeyDown(KeyCode.Escape))
+    //         {
+    //             if(Time.timeScale == 0){
+    //                 Resume();
+    //             }
+    //             menuPanel.SetActive(true);
+    //             Time.timeScale = 0;
+    //         }
+    //         else if (Input.GetKeyDown(KeyCode.R))
+    //         {
+    //             initScript.reset();
+    //         }
+    //     }else if (Input.GetKeyDown(KeyCode.Escape) &&  Time.timeScale == 0){
+    //                 Resume();
+    //     }
+    // }
 
     // void TogglePause()
     // {
@@ -57,5 +57,14 @@ public class Pause : MonoBehaviour
     {
         menuPanel.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void pause(){
+        menuPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void resetGame(){
+        initScript.reset();
     }
 }

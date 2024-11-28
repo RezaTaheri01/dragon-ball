@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,50 +12,47 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f; // Horizontal movement speed
     [SerializeField] private float jumpForce = 10f; // Vertical jump force
     [SerializeField] private float airControlFactor = 0.5f; // Control factor for air movement
+    [SerializeField] private float jumpThreshold = 0.7f; // Threshold for jumping from joystick input
 
     [Header("Player Components")]
     public Rigidbody2D body;
     private Animator animator;
 
+    [Header("Input Actions")]
+    [SerializeField] private InputActionReference moveActionReference; // Reference for joystick movement
+
+    private Vector2 movementInput; // Input vector for movement
     private bool grounded = true; // Is the player on the ground?
     private bool run = false; // Is the player running?
 
     private Quaternion lockedRotation;
-    private KeyCode rightKey;
-    private KeyCode leftKey;
-    private KeyCode jumpKey;
 
     private Vector3 facingRightScale;
     private Vector3 facingLeftScale;
 
-    private void Start()
+    private void Awake()
     {
-        // Lock rotation to prevent flipping
-        lockedRotation = transform.rotation;
-
         // Grab references
         animator = GetComponent<Animator>();
+
+        // Lock rotation to prevent flipping
+        lockedRotation = transform.rotation;
 
         // Set default scale directions
         facingRightScale = transform.localScale;
         facingLeftScale = new Vector3(-facingRightScale.x, facingRightScale.y, facingRightScale.z);
+    }
 
-        // Configure controls based on player
-        if (player == 1)
-        {
-            rightKey = KeyCode.RightArrow;
-            leftKey = KeyCode.LeftArrow;
-            jumpKey = KeyCode.UpArrow;
-            // Set default scale directions
-            facingLeftScale = transform.localScale;
-            facingRightScale = new Vector3(-facingRightScale.x, facingRightScale.y, facingRightScale.z);
-        }
-        else if (player == 2)
-        {
-            rightKey = KeyCode.D;
-            leftKey = KeyCode.A;
-            jumpKey = KeyCode.W;
-        }
+    private void OnEnable()
+    {
+        // Enable input actions
+        moveActionReference.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        // Disable input actions
+        moveActionReference.action.Disable();
     }
 
     private void Update()
@@ -62,44 +60,53 @@ public class PlayerMovement : MonoBehaviour
         // Lock rotation
         transform.rotation = lockedRotation;
 
-        // Horizontal movement
-        float horizontalInput = 0;
+        // Get movement input
+        movementInput = moveActionReference.action.ReadValue<Vector2>();
 
-        if (Input.GetKey(rightKey))
+        // Determine running state
+        run = Mathf.Abs(movementInput.x) > 0.1f;
+
+        if (run)
         {
-            horizontalInput = 1; // Move right
-            transform.localScale = facingRightScale; // Face right
-            run = true;
-            PlayRunSound();
-        }
-        else if (Input.GetKey(leftKey))
-        {
-            horizontalInput = -1; // Move left
-            transform.localScale = facingLeftScale; // Face left
-            run = true;
             PlayRunSound();
         }
         else
         {
-            run = false;
             StopRunSound();
         }
 
-        // Apply movement
+        // Flip player base on direction
+        if (player == 1){
+            if (movementInput.x < 0)
+            {
+                transform.localScale = facingRightScale;
+            }
+            else if (movementInput.x > 0)
+            {
+                transform.localScale = facingLeftScale;
+            }
+        }
+        else if (movementInput.x > 0)
+        {
+            transform.localScale = facingRightScale;
+        }
+        else if (movementInput.x < 0)
+        {
+            transform.localScale = facingLeftScale;
+        }
+
+        // Apply horizontal movement
         if (grounded)
         {
-            // Full control on the ground
-            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+            body.velocity = new Vector2(movementInput.x * speed, body.velocity.y);
         }
         else
         {
-            // Limited control in the air
-            body.velocity = new Vector2(horizontalInput * speed * airControlFactor, body.velocity.y);
-            StopRunSound();
+            body.velocity = new Vector2(movementInput.x * speed * airControlFactor, body.velocity.y);
         }
 
-        // Jumping
-        if (Input.GetKeyDown(jumpKey) && grounded)
+        // Check for jump input from joystick
+        if (movementInput.y > jumpThreshold && grounded)
         {
             Jump();
             PlayJumpSound();
@@ -156,10 +163,6 @@ public class PlayerMovement : MonoBehaviour
             // Disable looping to avoid unexpected behavior for other sounds
             runAudioSource.loop = false;
         }
-        // else
-        // {
-        //     Debug.LogWarning("Run AudioSource is not playing or not assigned!");
-        // }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

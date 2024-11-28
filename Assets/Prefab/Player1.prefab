@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6478905477965681191}
   - component: {fileID: -4242788759959903508}
   - component: {fileID: -6577269659158617254}
+  - component: {fileID: 1147868659537968771}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Frog
@@ -38,7 +39,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2263251405617385974
 SpriteRenderer:
@@ -287,7 +288,9 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   airControlFactor: 0.75
+  jumpThreshold: 0.7
   body: {fileID: 2263251405617385968}
+  moveActionReference: {fileID: -5819958369380644378, guid: 1899337d3cc73a644a18500039ac454e, type: 3}
 --- !u!82 &-4242788759959903508
 AudioSource:
   m_ObjectHideFlags: 0
@@ -480,3 +483,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1147868659537968771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263251405617385963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1899337d3cc73a644a18500039ac454e, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Frog
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
