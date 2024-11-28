@@ -21,7 +21,7 @@ public class Pause : MonoBehaviour
         // Check if the space key is pressed
         if (menuPanel.activeSelf == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if(Time.timeScale == 0){
                     Resume();
@@ -33,7 +33,7 @@ public class Pause : MonoBehaviour
             {
                 initScript.reset();
             }
-        }else if (Input.GetKeyDown(KeyCode.Space) &&  Time.timeScale == 0){
+        }else if (Input.GetKeyDown(KeyCode.Escape) &&  Time.timeScale == 0){
                     Resume();
         }
     }
