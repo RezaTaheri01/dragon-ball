@@ -1,14 +1,23 @@
 {
-    "name": "LeftStick",
+    "name": "RightLeftStick",
     "maps": [
         {
-            "name": "Dragon",
+            "name": "DragonFrog",
             "id": "13e0f64a-196f-4468-a773-cb86c1d4d4cc",
             "actions": [
                 {
                     "name": "New action",
                     "type": "Value",
                     "id": "9aae4a7b-ec63-4ad3-9814-dc00e6db3372",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "New action1",
+                    "type": "Value",
+                    "id": "5c205b8e-d5ff-4aa4-b26f-918ce42075f3",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -24,6 +33,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc637450-e887-4c3c-9d7f-e33179eba916",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -33,13 +33,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263251405617385963}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -3.808, z: 0}
   m_LocalScale: {x: -5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2263251405617385974
 SpriteRenderer:
@@ -103,6 +103,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e30fa6df79d1dee4bbd0eaf30a9054a3, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -136,6 +155,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: e30fa6df79d1dee4bbd0eaf30a9054a3, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -160,6 +185,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4130050929973725511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +316,7 @@ MonoBehaviour:
   airControlFactor: 0.75
   jumpThreshold: 0.7
   body: {fileID: 2263251405617385968}
-  moveActionReference: {fileID: -5819958369380644378, guid: 1899337d3cc73a644a18500039ac454e, type: 3}
+  moveActionReference: {fileID: -3306903001635176100, guid: dffd7c274ff529242917d62b38402b27, type: 3}
 --- !u!82 &-4242788759959903508
 AudioSource:
   m_ObjectHideFlags: 0
@@ -495,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1899337d3cc73a644a18500039ac454e, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: dffd7c274ff529242917d62b38402b27, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -510,6 +536,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Frog
+  m_DefaultActionMap: DragonFrog
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
