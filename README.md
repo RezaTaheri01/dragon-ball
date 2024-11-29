@@ -9,15 +9,10 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 ## 🎮 Controls
 
 - **Frog Controls**:  
-  - Move: `← ↑ →`
+  - Move: `Right Joystick on screen`
   
 - **Dragon Controls**:  
-  - Move: `WASD`
-
-- **Gameplay**:
-  - `R`: Reset players and ball positions
-  - `Space`: Open/close the menu (V.1.0 - V.1.3)
-  - `escape`: Open/close the menu (newer versions & source code)
+  - Move: `Left Joystick on screen`
   - 
 ## 🕹️ Game Modes
 
