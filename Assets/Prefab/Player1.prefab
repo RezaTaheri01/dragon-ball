@@ -212,7 +212,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 58237142c257445a5a11fddaa7a07277, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.35
+  m_Volume: 0.45
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -311,12 +311,12 @@ MonoBehaviour:
   player: 1
   jumpAudioSource: {fileID: -4242788759959903508}
   runAudioSource: {fileID: -6577269659158617254}
-  speed: 5
-  jumpForce: 5
+  speed: 6
+  jumpForce: 6
   airControlFactor: 0.75
   jumpThreshold: 0.7
   body: {fileID: 2263251405617385968}
-  moveActionReference: {fileID: -3306903001635176100, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  moveActionReference: {fileID: 7365513299693290232, guid: 6329879899beea64b837b8bae075f877, type: 3}
 --- !u!82 &-4242788759959903508
 AudioSource:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bc5ca5e0703c54692a186434e1149ccd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -425,7 +425,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e1f1639c00ed9de46a663a05353cd8bb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.225
+  m_Volume: 0.275
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 6329879899beea64b837b8bae075f877, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -536,6 +536,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: DragonFrog
+  m_DefaultActionMap: Frog
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
