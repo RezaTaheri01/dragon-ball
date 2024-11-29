@@ -25,7 +25,7 @@ You can find the executable releases in the **Releases** section of the reposito
 
 ## 🖼️ Game Preview
 
-![Dragon_Ball](https://github.com/user-attachments/assets/f6bc7390-2f32-4230-8a12-dbeafc6a6005)
+![dragon-ball - Scene1 - Android](https://github.com/user-attachments/assets/3b89715c-6e28-4161-a85b-b69dfd024979)
 
 ## 💬 Project Acknowledgment
 
