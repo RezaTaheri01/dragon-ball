@@ -2,6 +2,9 @@
 
 Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! This game features two unique characters — the **Frog** and the **Dragon** — each with their own set of controls. Challenge yourself and have fun navigating through this quirky game!
 
+## 💻 Display
+- Support displays with **16:9** Aspect ratio (1920x1080, 1280x720, ...)
+
 ## 🛠️ Editor Version
 
 - **Unity Version**: 2022.3.53f1
