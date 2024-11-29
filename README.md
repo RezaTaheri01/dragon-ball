@@ -4,7 +4,7 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 
 ## 🛠️ Editor Version
 
-- **Unity Version**: 2022.1.24f1
+- **Unity Version**: 2022.3.53f1
 
 ## 🎮 Controls
 
