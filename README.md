@@ -2,6 +2,9 @@
 
 Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! This game features two unique characters — the **Frog** and the **Dragon** — each with their own set of controls. Challenge yourself and have fun navigating through this quirky game!
 
+## 📱 Display
+- Support smartphones not tablets
+
 ## 🛠️ Editor Version
 
 - **Unity Version**: 2022.3.53f1
@@ -9,15 +12,10 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 ## 🎮 Controls
 
 - **Frog Controls**:  
-  - Move: `← ↑ →`
+  - Move: `Right Joystick on screen`
   
 - **Dragon Controls**:  
-  - Move: `WASD`
-
-- **Gameplay**:
-  - `R`: Reset players and ball positions
-  - `Space`: Open/close the menu (V.1.0 - V.1.3)
-  - `escape`: Open/close the menu (newer versions & source code)
+  - Move: `Left Joystick on screen`
   - 
 ## 🕹️ Game Modes
 
@@ -26,11 +24,11 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 
 ## 📦 Download the Game
 
-You can find the executable releases in the **Releases** section of the repository.
+You can find the executable releases in the **Releases** section of the repository. (Android 10 or above required)
 
 ## 🖼️ Game Preview
 
-![Dragon_Ball](https://github.com/user-attachments/assets/f6bc7390-2f32-4230-8a12-dbeafc6a6005)
+![dragon-ball - Scene1 - Android](https://github.com/user-attachments/assets/3b89715c-6e28-4161-a85b-b69dfd024979)
 
 ## 💬 Project Acknowledgment
 
