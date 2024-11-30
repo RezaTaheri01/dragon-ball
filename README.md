@@ -24,7 +24,7 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 
 ## 📦 Download the Game
 
-You can find the executable releases in the **Releases** section of the repository. [Android](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V1.4.Android)
+You can find the executable releases in the **Releases** section of the repository. [Android](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V1.4.Android) [Windows](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V.1.4) [Linux](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V.1.4.Linux) [MacOS](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V1.4.MacOS)
 
 ## 🖼️ Game Preview
 
