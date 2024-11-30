@@ -16,7 +16,7 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
   
 - **Dragon Controls**:  
   - Move: `Left Joystick on screen`
-  - 
+ 
 ## 🕹️ Game Modes
 
 - **Single Player Mode**: Play with the Frog.
