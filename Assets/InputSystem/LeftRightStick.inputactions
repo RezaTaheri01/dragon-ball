@@ -1,0 +1,62 @@
+{
+    "name": "LeftRightStick",
+    "maps": [
+        {
+            "name": "Dragon",
+            "id": "13e0f64a-196f-4468-a773-cb86c1d4d4cc",
+            "actions": [
+                {
+                    "name": "Dragon Action",
+                    "type": "Value",
+                    "id": "3d641655-f9a5-4dae-812d-4a366f07f9b6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "36c7df03-2f4b-45d0-ba7c-5f2ec968ee43",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dragon Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Frog",
+            "id": "19efd44c-8c6b-479a-84ed-d129500a6f28",
+            "actions": [
+                {
+                    "name": "Frog Action",
+                    "type": "Value",
+                    "id": "90f413cb-bf9c-4087-8573-409d3483dcad",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9d39af42-d124-41e8-9e99-c2d93a0382fe",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Frog Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

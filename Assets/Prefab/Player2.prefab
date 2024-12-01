@@ -332,7 +332,8 @@ MonoBehaviour:
   airControlFactor: 0.75
   jumpThreshold: 0.4
   body: {fileID: 1633415367587991455}
-  moveActionReference: {fileID: 7251492935452126299, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  moveActionReferencePlayer1: {fileID: 7760187931650773882, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  moveActionReferencePlayer2: {fileID: -1451089973275992809, guid: dffd7c274ff529242917d62b38402b27, type: 3}
 --- !u!82 &3903498975290637101
 AudioSource:
   m_ObjectHideFlags: 0

@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     [Header("Input Actions")]
-    [SerializeField] private InputActionReference moveActionReference; // Reference for joystick movement
+    [SerializeField] private InputActionReference moveActionReferencePlayer1; // Input for Player 1
+    [SerializeField] private InputActionReference moveActionReferencePlayer2; // Input for Player 2
 
+    private InputAction moveAction; // Assigned input action for the current player
     private Vector2 movementInput; // Input vector for movement
     private bool grounded = true; // Is the player on the ground?
     private bool run = false; // Is the player running?
@@ -45,14 +47,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        // Enable input actions
-        moveActionReference.action.Enable();
+        // Assign the correct action based on the player
+        moveAction = (player == 1) ? moveActionReferencePlayer1.action : moveActionReferencePlayer2.action;
+
+        // Enable the input action
+        moveAction.Enable();
     }
 
     private void OnDisable()
     {
-        // Disable input actions
-        moveActionReference.action.Disable();
+        // Disable the input action
+        moveAction.Disable();
     }
 
     private void Update()
@@ -60,8 +65,8 @@ public class PlayerMovement : MonoBehaviour
         // Lock rotation
         transform.rotation = lockedRotation;
 
-        // Get movement input
-        movementInput = moveActionReference.action.ReadValue<Vector2>();
+        // Get movement input from the assigned action
+        movementInput = moveAction.ReadValue<Vector2>();
 
         // Determine running state
         run = Mathf.Abs(movementInput.x) > 0.1f;
@@ -75,8 +80,9 @@ public class PlayerMovement : MonoBehaviour
             StopRunSound();
         }
 
-        // Flip player base on direction
-        if (player == 1){
+        // Flip player based on direction
+        if (player == 1)
+        {
             if (movementInput.x < 0)
             {
                 transform.localScale = facingRightScale;
