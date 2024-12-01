@@ -2900,14 +2900,14 @@ RectTransform:
   m_GameObject: {fileID: 651638556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2117651727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50, y: 5}
+  m_AnchoredPosition: {x: -75, y: 15}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &651638558
@@ -2923,12 +2923,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementRange: 10
-  m_DynamicOriginRange: 100
+  m_DynamicOriginRange: 0
   m_ControlPath: <Gamepad>/rightStick
-  m_Behaviour: 0
+  m_Behaviour: 2
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
-    m_Name: 
+    m_Name: Pointer Down
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 59c04b96-32ae-4a3a-a8e8-57722ce81bc5
@@ -2937,7 +2937,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_PointerMoveAction:
-    m_Name: 
+    m_Name: Pointer Move
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 26ce098e-4a25-494c-b6fc-66af170e89fd
@@ -3921,14 +3921,14 @@ RectTransform:
   m_GameObject: {fileID: 1046975114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2117651727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 5}
+  m_AnchoredPosition: {x: 75, y: 15}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1046975116
@@ -3981,13 +3981,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementRange: 10
-  m_DynamicOriginRange: 100
+  m_MovementRange: 15
+  m_DynamicOriginRange: 0
   m_ControlPath: <Gamepad>/leftStick
-  m_Behaviour: 0
+  m_Behaviour: 2
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
-    m_Name: 
+    m_Name: Pointer Down
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 4eba11fa-6471-4a33-a826-97d7ef6e498a
@@ -3996,7 +3996,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_PointerMoveAction:
-    m_Name: 
+    m_Name: Pointer Move
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: d17c46d0-63a1-4f04-9316-912e7a3adb73
@@ -7547,6 +7547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37f7f81f1e4a334f9a37fa5ecbd979b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 1046975116}
   Mode: {fileID: 1092921045}
   player: {fileID: 1633415367587991452, guid: 08cee80a3c49c2b49b2c9e63e3ed0c04, type: 3}
   mainCam: {fileID: 1656419555}
@@ -9140,6 +9141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37f7f81f1e4a334f9a37fa5ecbd979b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 1046975116}
   Mode: {fileID: 1092921045}
   player: {fileID: 1633415367587991452, guid: 08cee80a3c49c2b49b2c9e63e3ed0c04, type: 3}
   mainCam: {fileID: 1656419555}
