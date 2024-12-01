@@ -312,9 +312,9 @@ MonoBehaviour:
   jumpAudioSource: {fileID: -4242788759959903508}
   runAudioSource: {fileID: -6577269659158617254}
   speed: 6
-  jumpForce: 6
+  jumpForce: 6.25
   airControlFactor: 0.75
-  jumpThreshold: 0.7
+  jumpThreshold: 0.4
   body: {fileID: 2263251405617385968}
   moveActionReference: {fileID: 7365513299693290232, guid: 6329879899beea64b837b8bae075f877, type: 3}
 --- !u!82 &-4242788759959903508
