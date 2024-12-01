@@ -20,7 +20,7 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 ## 🕹️ Game Modes
 
 - **Single Player Mode**: Play with the Frog.
-- **Multiplayer Mode**: Play with a friend! One controls the Frog, and the other controls the Dragon.
+- (Not working correctly)**Multiplayer Mode**: Play with a friend! One controls the Frog, and the other controls the Dragon.
 
 ## 📦 Download the Game
 
