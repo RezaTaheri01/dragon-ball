@@ -20,15 +20,15 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
 ## 🕹️ Game Modes
 
 - **Single Player Mode**: Play with the Frog.
-- **Multiplayer Mode**: Play with a friend! One controls the Frog, and the other controls the Dragon.
+- (Not working correctly)**Multiplayer Mode**: Play with a friend! One controls the Frog, and the other controls the Dragon.
 
 ## 📦 Download the Game
 
-You can find the executable releases in the **Releases** section of the repository. [Android](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V1.4.Android) [Windows](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V.1.4) [Linux](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V.1.4.Linux) [MacOS](https://github.com/RezaTaheri01/dragon-ball/releases/tag/V1.4.MacOS)
+You can find the executable releases in the **Releases** section of the repository. [Windows](https://github.com/RezaTaheri01/dragon-ball/releases?q=Windows&expanded=true) [Linux](https://github.com/RezaTaheri01/dragon-ball/releases?q=Linux&expanded=true) [MacOS](https://github.com/RezaTaheri01/dragon-ball/releases?q=MacOS&expanded=true) [Android](https://github.com/RezaTaheri01/dragon-ball/releases?q=Android&expanded=true)
 
 ## 🖼️ Game Preview
 
-![dragon-ball - Scene1 - Android](https://github.com/user-attachments/assets/3b89715c-6e28-4161-a85b-b69dfd024979)
+![Screenshot_20241202_022954_Dragon Ball.jpg](https://github.com/user-attachments/assets/f56f4293-dc58-4228-928d-33f9734ee2c8)
 
 ## 💬 Project Acknowledgment
 
