@@ -2925,7 +2925,7 @@ MonoBehaviour:
   m_MovementRange: 10
   m_DynamicOriginRange: 0
   m_ControlPath: <Gamepad>/rightStick
-  m_Behaviour: 2
+  m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
     m_Name: Pointer Down
@@ -3981,10 +3981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementRange: 15
+  m_MovementRange: 10
   m_DynamicOriginRange: 0
   m_ControlPath: <Gamepad>/leftStick
-  m_Behaviour: 2
+  m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
     m_Name: Pointer Down
