@@ -3,6 +3,7 @@ using System.Collections;
 
 public class init : MonoBehaviour
 {
+    public int win_score = 2;
     public Transform ballStartPosition;     // Assign in Inspector
     public Transform player1StartPosition; // Assign in Inspector
     public Transform player2StartPosition; // Assign in Inspector
@@ -15,6 +16,14 @@ public class init : MonoBehaviour
     private GameObject player1Instance;
     private GameObject player2Instance;
 
+    public int get_win_score(){
+        return win_score;
+    }
+
+    public void add_win_score(){
+        win_score++;
+    }
+    
     void Start()
     {
         ballInstance = Instantiate(ballPrefab);
