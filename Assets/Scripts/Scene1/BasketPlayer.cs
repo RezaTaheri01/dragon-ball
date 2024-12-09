@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro; // Required for TextMesh Pro
+using UnityEngine.SceneManagement;
+
 
 
 
@@ -65,6 +67,11 @@ public class BasketPlayer : MonoBehaviour
             temp = int.Parse(score_player.text);
             temp2 = int.Parse(score_enemy.text);
             score_player.text = $"{temp + 1}";
+            // if (temp == 20 || temp2 == 20){
+            //     // show a banner that say someone ready for boss and wait a few second
+            //     // or voice :)
+            //     SceneManager.LoadScene(2);
+            // }
             PlaySound(temp, temp2);
             initScript.reset();
             ShowGoalBanner();
