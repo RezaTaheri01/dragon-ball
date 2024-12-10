@@ -6120,7 +6120,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467605846}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1116ced9f017b0140949034cdd82f0e3, type: 3}
@@ -6858,7 +6858,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531521698}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1116ced9f017b0140949034cdd82f0e3, type: 3}
@@ -9842,7 +9842,7 @@ MonoBehaviour:
   goalText: {fileID: 92608541}
   displayDuration: 2
   goalAudioSource: {fileID: 425962170}
-  persuasionAudioSource: {fileID: 1902073513}
+  persuasionAudioSource: {fileID: 0}
   drawAudioSource: {fileID: 1156530407}
   fadeDuration: 1
 --- !u!1660057539 &9223372036854775807
