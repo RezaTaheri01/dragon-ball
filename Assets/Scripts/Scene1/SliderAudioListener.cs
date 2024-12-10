@@ -6,7 +6,7 @@ public class SliderAudioListener : MonoBehaviour
 {
     public UnityEngine.UI.Slider volumeSlider;    // Reference to the Slider
     public TextMeshProUGUI volumeLabelTMP;        // Reference to the TextMeshPro for displaying volume
-    private const string VolumePrefKey = "Scene1Volume"; // Key to save and retrieve volume
+    private const string VolumePrefKey = "MainVolume"; // Key to save and retrieve volume
 
     void Start()
     {
