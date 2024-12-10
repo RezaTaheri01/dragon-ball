@@ -4276,7 +4276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: Playground
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6103,7 +6103,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.039215688, g: 0.6745098, b: 0.03529412, a: 1}
+  m_Color: {r: 0.5411765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6496,7 +6496,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24453350}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 442eed308e7e07d4bb106bf6acf142cf, type: 3}
@@ -6985,7 +6985,7 @@ MonoBehaviour:
   goalAudioSource: {fileID: 417412050}
   persuasionAudioSource: {fileID: 1902073513}
   drawAudioSource: {fileID: 1156530407}
-  fadeDuration: 2
+  fadeDuration: 1
 --- !u!1 &1592947531
 GameObject:
   m_ObjectHideFlags: 0
@@ -9023,7 +9023,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &2048847888
 RectTransform:
@@ -9673,15 +9673,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2936080103859674510, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
       propertyPath: m_Color.b
-      value: 0.034410764
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936080103859674510, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
       propertyPath: m_Color.g
-      value: 0.6754716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936080103859674510, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
       propertyPath: m_Color.r
-      value: 0.038068015
+      value: 0.5411765
       objectReference: {fileID: 0}
     - target: {fileID: 4764627990148765184, guid: d76e6e75fea31ac48b856b719cb36437, type: 3}
       propertyPath: Priority
@@ -9840,11 +9840,11 @@ MonoBehaviour:
   score_player: {fileID: 378436382}
   score_enemy: {fileID: 237957902}
   goalText: {fileID: 92608541}
-  displayDuration: 1
+  displayDuration: 2
   goalAudioSource: {fileID: 425962170}
   persuasionAudioSource: {fileID: 1902073513}
   drawAudioSource: {fileID: 1156530407}
-  fadeDuration: 2
+  fadeDuration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
