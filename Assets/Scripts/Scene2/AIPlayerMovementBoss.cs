@@ -54,9 +54,8 @@ public class AIPlayerMovementBoss : MonoBehaviour
             // {
             //     ShootBallToEnemyHome();
             // }
-            Debug.Log("ball is on range");
             if (IsOnLeftSideOfBall())
-            {   Debug.Log("ball is on left side");
+            {   
                 MoveBallToLeftOfPlayer();
             }
         }
@@ -81,15 +80,15 @@ public class AIPlayerMovementBoss : MonoBehaviour
     private bool IsOnLeftSideOfBall()
     {
         float height = GetComponent<Collider2D>().bounds.size.y;
-        float width = GetComponent<Collider2D>().bounds.size.x;
 
-        return transform.position.x < ball.position.x && transform.position.y + height > ball.position.y;
+        return transform.position.x < ball.position.x &&
+         transform.position.y + (height / 2) > ball.position.y;
     }
 
     private bool IsBallInRange()
     {
         // Check if the ball is within the control range
-        float distanceToBall = Vector2.Distance(transform.position, ball.position);
+        float distanceToBall = Mathf.Abs(transform.position.x - ball.position.x);
         return distanceToBall <= controlRange;
     }
 
@@ -109,6 +108,7 @@ public class AIPlayerMovementBoss : MonoBehaviour
         HandleFlip(direction.x);
 
         run = true;
+
     }
 
     private void HandleFlip(float directionX)
@@ -144,4 +144,5 @@ public class AIPlayerMovementBoss : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             grounded = false;
     }
+    
 }
