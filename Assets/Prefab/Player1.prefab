@@ -313,7 +313,7 @@ MonoBehaviour:
   runAudioSource: {fileID: -6577269659158617254}
   speed: 6
   jumpForce: 6.25
-  airControlFactor: 0.75
+  airControlFactor: 1
   jumpThreshold: 0.4
   body: {fileID: 2263251405617385968}
   moveActionReferencePlayer1: {fileID: 7760187931650773882, guid: dffd7c274ff529242917d62b38402b27, type: 3}
