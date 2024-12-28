@@ -21,7 +21,7 @@ Welcome to **Dragon Ball**, a fun and fast-paced 2D game created with Unity! Thi
   - `R`: Reset players and ball positions
   - `Space`: Open/close the menu (V.1.0 - V.1.3)
   - `escape`: Open/close the menu (newer versions & source code)
-  - 
+  
 ## 🕹️ Game Modes
 
 - **Single Player Mode**: Play with the Frog and in some levels with Dragon.
