@@ -317,7 +317,7 @@ MonoBehaviour:
   jumpThreshold: 0.4
   body: {fileID: 2263251405617385968}
   moveActionReferencePlayer1: {fileID: 7760187931650773882, guid: dffd7c274ff529242917d62b38402b27, type: 3}
-  moveActionReferencePlayer2: {fileID: -1451089973275992809, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  moveActionReferencePlayer2: {fileID: -1451089973275992809, guid: 0c2392c53157975439411bcb7157ad5b, type: 3}
 --- !u!82 &-4242788759959903508
 AudioSource:
   m_ObjectHideFlags: 0

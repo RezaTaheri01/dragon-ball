@@ -208,7 +208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633415367587991452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54ade60560393c84fa0c81f8ab310f8e, type: 3}
   m_Name: 
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633415367587991452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2a8a5db6902d0e45b41b2d89f5f0726, type: 3}
   m_Name: 
@@ -333,7 +333,7 @@ MonoBehaviour:
   jumpThreshold: 0.4
   body: {fileID: 1633415367587991455}
   moveActionReferencePlayer1: {fileID: 7760187931650773882, guid: dffd7c274ff529242917d62b38402b27, type: 3}
-  moveActionReferencePlayer2: {fileID: -1451089973275992809, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  moveActionReferencePlayer2: {fileID: -1451089973275992809, guid: 0c2392c53157975439411bcb7157ad5b, type: 3}
 --- !u!82 &3903498975290637101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: dffd7c274ff529242917d62b38402b27, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 0c2392c53157975439411bcb7157ad5b, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
