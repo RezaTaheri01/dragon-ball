@@ -43,3 +43,7 @@ Also You can play it online on itch.io [WebBased](https://aghreza.itch.io/dragon
 ## 💬 Project Acknowledgment
 
 I used **ChatGPT** to guide me through the development process of this project.
+
+## Todos
+
+- [ ] Improve single player AI
